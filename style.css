@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(background.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo img {
+    position: absolute;
+    top: 4%;
+    width: 100px;
+    height: auto;
+}
+
+ul {
+    position: absolute;
+    left: 35%;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #7350b9f2;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+ul li:hover::after {
+    width: 100%;
+}
+
+.tab {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #7350b9f2;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button span {
+    background: #7350b9f2;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(backround.jpg);
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(backround.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.tab {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.tab.active {
+    color: #7350b9f2;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #7350b9f2;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+h1,
+h2,
+p,
+ul,
+ol {
+    margin-bottom: 15px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.ltab {
+    cursor: pointer;
+    text-decoration: none;
+    color: red;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    font-weight: 1000;
+}
+
+.ltab.active {
+    background-color: red;
+    color: #000;
+}
+
+.ltab:hover {
+    background-color: red;
+    color: #000;
+}
+
+.main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.form-box {
+    width: 380px;
+    height: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 2% auto;
+    background: #fff;
+    padding: 20px; /* Adjusted padding for better spacing */
+    overflow: hidden;
+}
+
+.form-box h1 {
+    font-size: 30px;
+    color: purple; /* Changed color to purple */
+    font-weight: 1000;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    top: 50%; /* Adjusted position for better centering */
+    position: absolute;
+    width: 280px;
+    transform: translate(0%, -50%); /* Center vertically */
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    color: white;
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: purple; /* Change this to the desired purple color */
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 1000;
+}
+.check-box {
+    margin: 30px 10px 34px 0;
+}
+
+span {
+    font-weight: 1000;
+    color: red;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+/* Style for the contact form */
+.contact-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 10vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white; /* Purple background with some transparency */
+    border-radius: 10px; /* Optional: Add border radius for a rounded appearance */
+}
+.contact-form h2 {
+    font-size: 30px;
+    color: purple; /* Changed color to purple */
+    font-weight: 1000;
+}
+
+.contact-form .inputbox {
+    position: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-form .inputbox input,
+.contact-form .inputbox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+#send-message input,
+#send-message textarea {
+    color: #000;
+    font-size: 16px;
+    font-weight: 1000;
+}
+
+.contact-form .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contact-form .inputbox input[type="submit"] {
+    width: 100px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 1000;
+}
+
+#about {
+    padding: 10em;
+    margin: 0 0;
+    text-align: center;
+    background-color: #000000; /* Change the background color as needed */
+}
+
+#about .about-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about .about-text h1 {
+    color: #7350b9f2; /* Change the color as needed */
+}
+
+#about .about-text p,
+#about .about-text ul,
+#about .about-text ol {
+    color: ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center the text */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px; /* Increase the padding to increase the height */
+    min-height: 400px; /* Set a minimum height if needed */
+}
+
+
+.services h1 {
+    font-size: 28px;
+    color: #7350b9f2;
+    margin-bottom: 20px;
+}
+
+.services p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Style the minimum investment and attractive returns details */
+.services p:nth-child(4),
+.services p:nth-child(5) {
+    font-weight: bold;
+    color: #ffffff;
+}
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
